@@ -34,7 +34,9 @@ class MainActivity  (override val bindingInflater: (LayoutInflater) -> MainActiv
     }
 
     override fun onFails(message: String) {
-        showError(title = "Error en login","Valida tus usuario o contraseña","Cerrar")
+        showError(title = "Error en login","Valida tu conexión de internet ","Cerrar",{
+            finishAffinity()
+        })
     }
     override fun onLoader(data: Boolean) {
         if(data)

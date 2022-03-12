@@ -49,7 +49,7 @@ abstract class BaseActivity<T : ViewBinding> : AppCompatActivity() {
         subTitle: String,
         textBtn1: String = "Cancelar",
         onClickBtn1: (() -> Unit)? = null,
-        @RawRes lottieFile: Int = R.raw.success,
+        @RawRes lottieFile: Int = R.raw.error,
     ){
 
         DialogsUtils.showErrorDialog(

@@ -24,6 +24,7 @@ class SplashActivity (override val bindingInflater: (LayoutInflater) -> SplashAc
             override fun onFinish() {
 
                 startActivity(MainActivity::class.java)
+                finish()
             }
         }.start()    }
 }
