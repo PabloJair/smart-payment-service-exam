@@ -26,7 +26,7 @@ android {
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            buildConfigField 'String', 'URL_BASE_API', '"https://s10plus.com:8443/wsdemos/"'
+            buildConfigField 'String', 'URL_BASE_API', '"https://api.openweathermap.org/data/2.5/"'
             buildConfigField 'String', 'API_KEY', '"3e2351f4b17bf02b98439937c69da576"'
 
         }

@@ -4,13 +4,11 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_margin="8dp"
-    android:background="@color/primaryColor"
     android:layout_height="60dp">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/rootView"
         android:layout_width="match_parent"
-        android:background="@color/primaryColor"
         android:layout_height="match_parent">
 
 
@@ -18,7 +16,7 @@
             android:id="@+id/imageView"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:src="@drawable/ic_broken"
+            android:src="@drawable/cloud"
             android:layout_marginStart="5dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -34,17 +32,20 @@
             app:layout_constraintTop_toTopOf="parent">
 
             <TextView
+                android:id="@+id/day"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Nombre del contacto" />
+            <TextView
                 android:id="@+id/temp"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/primaryTextColor"
                 android:text="Nombre del contacto" />
 
             <TextView
                 android:id="@+id/humidity"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:textColor="@color/primaryTextColor"
 
                 android:text="Número" />
         </LinearLayout>

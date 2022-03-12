@@ -1,12 +1,10 @@
 package com.smart.payment.service.exam.data.remote.model
 import com.google.gson.annotations.SerializedName
-
-
 data class WeatherModel(
     @SerializedName("current")
     val current: Current,
-    @SerializedName("hourly")
-    val hourly: List<Hourly>,
+    @SerializedName("daily")
+    val daily: List<Daily>,
     @SerializedName("lat")
     val lat: Double,
     @SerializedName("lon")
@@ -50,25 +48,35 @@ data class Current(
     val windSpeed: Double
 )
 
-data class Hourly(
+data class Daily(
     @SerializedName("clouds")
     val clouds: Int,
     @SerializedName("dew_point")
     val dewPoint: Double,
     @SerializedName("dt")
-    val dt: Int,
+    val dt: Long,
     @SerializedName("feels_like")
-    val feelsLike: Double,
+    val feelsLike: FeelsLike,
     @SerializedName("humidity")
     val humidity: Int,
+    @SerializedName("moon_phase")
+    val moonPhase: Double,
+    @SerializedName("moonrise")
+    val moonrise: Int,
+    @SerializedName("moonset")
+    val moonset: Int,
+    @SerializedName("pop")
+    val pop: Int,
     @SerializedName("pressure")
     val pressure: Int,
+    @SerializedName("sunrise")
+    val sunrise: Long,
+    @SerializedName("sunset")
+    val sunset: Long,
     @SerializedName("temp")
-    val temp: Double,
+    val temp: Temp,
     @SerializedName("uvi")
     val uvi: Double,
-    @SerializedName("visibility")
-    val visibility: Int,
     @SerializedName("weather")
     val weather: List<WeatherX>,
     @SerializedName("wind_deg")
@@ -88,6 +96,32 @@ data class Weather(
     val id: Int,
     @SerializedName("main")
     val main: String
+)
+
+data class FeelsLike(
+    @SerializedName("day")
+    val day: Double,
+    @SerializedName("eve")
+    val eve: Double,
+    @SerializedName("morn")
+    val morn: Double,
+    @SerializedName("night")
+    val night: Double
+)
+
+data class Temp(
+    @SerializedName("day")
+    val day: Double,
+    @SerializedName("eve")
+    val eve: Double,
+    @SerializedName("max")
+    val max: Double,
+    @SerializedName("min")
+    val min: Double,
+    @SerializedName("morn")
+    val morn: Double,
+    @SerializedName("night")
+    val night: Double
 )
 
 data class WeatherX(

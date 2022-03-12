@@ -16,7 +16,7 @@ class SplashActivity (override val bindingInflater: (LayoutInflater) -> SplashAc
 
     override fun setupView() {
         supportActionBar?.hide();
-        object : CountDownTimer(10000, 1000) {
+        object : CountDownTimer(5000, 1000) {
 
             override fun onTick(millisUntilFinished: Long) {
             }

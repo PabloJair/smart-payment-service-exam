@@ -13,5 +13,5 @@
         app:layout_constraintTop_toTopOf="parent"
         app:lottie_autoPlay="true"
         app:lottie_loop="true"
-        app:lottie_rawRes="@raw/jarvis_loader" />
+        app:lottie_rawRes="@raw/splash" />
 </androidx.constraintlayout.widget.ConstraintLayout>

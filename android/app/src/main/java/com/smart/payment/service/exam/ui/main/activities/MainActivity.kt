@@ -4,7 +4,7 @@ import android.view.LayoutInflater
 import androidx.activity.viewModels
 import com.smart.payment.service.exam.core.base.BaseActivity
 import com.smart.payment.service.exam.core.utils.LoadingUtils
-import com.smart.payment.service.exam.data.remote.model.Hourly
+import com.smart.payment.service.exam.data.remote.model.Daily
 import com.smart.payment.service.exam.data.remote.model.WeatherModel
 import com.smart.payment.service.exam.databinding.MainActivityBinding
 import com.smart.payment.service.exam.ui.main.adapters.AdapterWeather
@@ -24,14 +24,13 @@ class MainActivity  (override val bindingInflater: (LayoutInflater) -> MainActiv
 
     }
 
-
     override fun setupViewModel() {
         viewModel.fetchData().observe(this,::onObserverViewModel)
     }
 
     override fun onSuccess(data: Any) {
         data as WeatherModel
-        adapter.setupItems(data.hourly as ArrayList<Hourly>)
+        adapter.setupItems(data.daily as ArrayList<Daily>)
     }
 
     override fun onFails(message: String) {
